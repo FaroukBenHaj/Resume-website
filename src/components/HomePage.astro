@@ -1,11 +1,7 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
-import general from '../content/general/index.mdx'
 import { getCollection } from 'astro:content';
-import { type CollectionEntry } from "astro:content";
 
-const generals = await getCollection("general");
+const generals = await getCollection("generals");
 const generalInfo = generals[0];
 
 ---
