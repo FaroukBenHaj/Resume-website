@@ -1,0 +1,23 @@
+---
+import astroLogo from '../assets/astro.svg';
+import background from '../assets/background.svg';
+import general from '../content/general/index.mdx'
+import { getCollection } from 'astro:content';
+import { type CollectionEntry } from "astro:content";
+
+const generals = await getCollection("general");
+const generalInfo = generals[0];
+
+---
+
+
+<div id="container">
+	<img id="background"  alt="" fetchpriority="high" />
+	<main>
+		<section id="hero">
+				<h1>{generalInfo.data.fullName}</h1>
+				<h2>{generalInfo.data.uni}</h2>
+				<h2>{generalInfo.data.description}</h2>
+		</section>
+	</main>
+</div>
