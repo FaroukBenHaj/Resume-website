@@ -1,6 +1,5 @@
 ---
 import { getCollection } from 'astro:content';
-
 const generals = await getCollection("generals");
 const generalInfo = generals[0];
 
@@ -8,12 +7,13 @@ const generalInfo = generals[0];
 
 
 <div id="container">
-	<img id="background"  alt="" fetchpriority="high" />
+	<img id="background"  alt="" />
 	<main>
+		
 		<section id="hero">
-				<h1>{generalInfo.data.fullName}</h1>
-				<h2>{generalInfo.data.uni}</h2>
-				<h2>{generalInfo.data.description}</h2>
+				<p>{generalInfo.data.description}</p>
+				<h1>{generalInfo.data.jobName}</h1>
+				<p>{generalInfo.data.country}</p>
 		</section>
 	</main>
 </div>
