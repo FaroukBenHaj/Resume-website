@@ -3,40 +3,27 @@ import { getCollection } from 'astro:content';
 const generals = await getCollection("generals");
 const generalInfo = generals[0];
 import {Button} from '@/components/ui/button';
+import {Box} from '@/components/ui/box';
 ---
 
-
-<div id="container">
-	<img id="background"  alt="" />
-	<main>
-		<section id="hero" 
-		class="flex flex-col text-center lg:gap-5  md:gap:2 gap-1  bg-amber-200 p-20" >
-				<p class="lg:text-xl md:text-md text-sm font-light "
-				>{generalInfo.data.description}</p>
-
-				<h1 class="scroll-m-20 xl:text-8xl lg:text-5xl  md:text-4xl  sm:text-3xl  text-2xl  font-black tracking-tight text-balance ">
-					<span>
-						Software Architecture Engineer
-					</span>
-					<br>
-						<span>
-						 & Web developper
-						</span>
-					
+<section class="min-h-screen   place-content-center  text-center py-10 px-2  bg-[url(../content/general/hero-bg-image.jpg)] bg-center bg-no-repeat bg-cover" >
+ 	<div class="px-5 lg:px-45 flex  flex-col gap-4 md:gap-10">
+				 <Box message={generalInfo.data.tag}/>
+				<h1 class="xl:text-6xl lg:text-5xl pb-3 md:text-4xl text-3xl  bg-gradient-to-r from-orange-300 via-blue-300 to-purple-400 bg-clip-text text-transparent  font-black text-balance ">
+					{generalInfo.data.header}
 				</h1>
+			<div class="xl:px-10 mx-auto">
+				<h2 class=" xl:text-2xl lg:text-xl pb-4 text-md text-white  font-light text-balance "
+				>{generalInfo.data.description}</h2>
+			</div>
+								
 
-				<div class='flex justify-around'>
-				<p class="lg:text-2xl md:text-xl sm:text-md  text-sm font-light "
-				>{generalInfo.data.country}</p>
-				<p class="lg:text-2xl md:text-xl sm:text-md  text-sm font-light "
-				>{generalInfo.data.uni}</p>
-				</div>
-
-				<div	id="home-btn">
-					<Button>{generalInfo.data.actionbutton?.contact}</Button>
+				<div id="home-btn" class="flex flex-col  sm:flex-row gap-4 md   justify-center">
+					<Button>
+						{generalInfo.data.actionbutton?.contact}</Button>
 					<Button variant="outline">{generalInfo.data.actionbutton?.cv}</Button>
 				</div>
+ 	</div>
+		
 				
 		</section>
-	</main>
-</div>
