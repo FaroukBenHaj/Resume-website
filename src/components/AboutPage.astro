@@ -1,8 +1,11 @@
 ---
 import { Button } from "./ui/button";
+import { getCollection } from 'astro:content';
+const generals = await getCollection("generals");
+const generalInfo = generals[0];
 ---
 <section id="aboutMe" class="flex md:flex-row flex-col gap-1">
-    <div class="flex flex-col">
+    <div class="flex flex-col ">
         <h1 class="text-4xl font-bold flex-1"
         >About Me </h1>
         <p>
@@ -18,6 +21,6 @@ import { Button } from "./ui/button";
         </Button>
     </div>
     <div >
-        image
+        <img class="w-xl" src={generalInfo.data.media.img} alt={generalInfo.data.media.alt}/>
     </div>
 </section>
