@@ -1,14 +1,14 @@
 ---
-import ProfessionalPage from '@/components/professionalPage.astro';
-import HomePage from '../components/HomePage.astro';
+import ProfessionalSection from '@/components/ProfessionalSection/index.astro';
+import HeroSection from '../components/HeroSection/index.astro';
 import Layout from '../layouts/Layout.astro';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<HomePage/>
+	<HeroSection/>
 	<div class="max-w-[320px] sm:max-w-[640px] md:max-w-[800px]  lg:max-w-[1440px] xl=max-w-[1200px] m-auto " >
-	<ProfessionalPage/>
+	<ProfessionalSection/>
 	</div>
 </Layout>
