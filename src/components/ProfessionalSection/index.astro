@@ -7,20 +7,37 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
+import { getCollection } from "astro:content";
+const professional = await getCollection("professional");
 ---
-<section class="flex flex-row ">
-<Card>
-  <CardHeader>
-    <CardTitle>Card Title</CardTitle>
-    <CardDescription>Card Description</CardDescription>
-    <CardAction>Card Action</CardAction>
+<section class="flex flex-col gap-5 md:m-10 m-5 lg:px-30 ">
+  <div id="header" class="text-center flex flex-col gap-5">
+    <h1 class="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-300 to-orange-400 bg-clip-text text-transparent text-balance ">Work experience </h1>
+    <p class="text-xl ">A journey through multiple internships, contributing to development and user experience design, 
+      and building hands-on expertise in full-stack web applications and intuitive interfaces.</p>
+  </div>
+   <div class="flex flex-col gap-5 ">
+  {professional.map((pro) =>(
+   
+ <Card>
+<CardHeader>
+    <CardTitle>{pro.data.title}</CardTitle>
+    <CardDescription>{pro.data.company}</CardDescription>
+    <CardAction>{pro.data.year}</CardAction>
   </CardHeader>
   <CardContent>
-    <p>Card Content</p>
+    <p>My tasks </p>
   </CardContent>
   <CardFooter>
     <p>Card Footer</p>
   </CardFooter>
 </Card>
+
+
+   
+  ))
+  }
+      </div>
+
 </section>
