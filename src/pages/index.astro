@@ -7,7 +7,9 @@ import About from './about.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout class="max-w-[320px] sm:max-w-[640px] md:max-w-[800px]  lg:max-w-[1440px] xl=max-w-[1200px] m-100% "  >
+<Layout>
 	<HomePage/>
-	<About/>
+	<div class="max-w-[320px] sm:max-w-[640px] md:max-w-[800px]  lg:max-w-[1440px] xl=max-w-[1200px] m-auto " >
+		<About/>
+	</div>
 </Layout>
