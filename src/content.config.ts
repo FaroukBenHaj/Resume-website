@@ -2,6 +2,7 @@ import { defineCollection } from "astro:content";
 import  {glob} from "astro/loaders"
 import { zGeneral } from "./schemas/general";
 import { zProfessional } from "./schemas/professional";
+import { zSkills } from "./schemas/skills";
 
 export const collections= {
     generals: defineCollection({
@@ -11,5 +12,9 @@ export const collections= {
     professional: defineCollection({
         loader: glob({pattern:"**/*.mdx" , base:"./src/content/professional"}),
         schema: zProfessional,
+    }),
+    skills: defineCollection({
+            loader: glob({pattern:"**/*.mdx" , base:"./src/content/skills"}),
+            schema:zSkills,
     })
 }
