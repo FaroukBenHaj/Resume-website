@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/card";
 import { getCollection } from "astro:content";
 const professional = await getCollection("professional");
+
+import{ BoxSkills} from '@/components/ui/box';
 ---
 <section class="flex flex-col gap-5 md:m-10 m-5 lg:px-30 ">
   <div id="header" class="text-center flex flex-col gap-5">
@@ -37,12 +39,8 @@ const professional = await getCollection("professional");
     )}  
   </CardContent>
   <CardFooter>
-    <p>Card Footer</p>
   </CardFooter>
-</Card>
-
-
-   
+</Card> 
   ))
   }
       </div>
