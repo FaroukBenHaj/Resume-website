@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+const skills = await getCollection("skills");
+import{H2} from '@/components/ui/typography';
+---
+<section class="text-center">
+    <H2 header="TechStack"/>
+    <div class="flex flex-wrap justify-between">
+        {skills.map((skill)=>(
+            <img class="md:max-w-30 md:max-h-30 max-w-20 max-h-20 " src={skill.data.media.logo} alt={skill.data.media.alt} />
+        )
+        )}
+
+    </div>
+ 
+</section>
