@@ -6,7 +6,7 @@ import {Button} from '@/components/ui/button';
 import {Box} from '@/components/ui/box';
 ---
 
-<section class="min-h-screen place-content-center text-center py-10 px-2  bg-[url(../content/general/hero-bg-image.jpg)] bg-center bg-no-repeat bg-cover " >
+<section class="min-h-screen place-content-center text-center py-10 px-2  bg-[url(../content/general/hero-bg-image.jpg)] bg-center bg-no-repeat bg-cover mask-y-from-70% mask-y-to-90% " >
  	<div class="flex  flex-col gap-4 md:gap-10 max-w-[320px] sm:max-w-[640px] md:max-w-[800px]  lg:max-w-[1440px] xl=max-w-[1200px] m-auto">
 				 <Box message={generalInfo.data.tag}/>
 				<h1 class="xl:text-6xl lg:text-5xl pb-3 md:text-4xl text-3xl  bg-gradient-to-r from-orange-300 via-blue-300 to-purple-400 bg-clip-text text-transparent  font-black text-balance ">
@@ -24,6 +24,7 @@ import {Box} from '@/components/ui/box';
 					download="MohamedFarouk-benHajAmor.pdf"
 					>
 					<Button 
+					size="lg"
 					variant="outline" 
 					>{generalInfo.data.actionbutton?.cv}</Button></a>
 				</div>
