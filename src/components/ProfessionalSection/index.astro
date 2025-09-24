@@ -39,6 +39,9 @@ import{ BoxSkills} from '@/components/ui/box';
     )}  
   </CardContent>
   <CardFooter>
+    {pro.data.relatedSkills.map(skill => (
+      <BoxSkills message={skill.id}/>
+    ))}
   </CardFooter>
 </Card> 
   ))
