@@ -18,16 +18,23 @@ const professional = await getCollection("professional");
       and building hands-on expertise in full-stack web applications and intuitive interfaces.</p>
   </div>
    <div class="flex flex-col gap-5 ">
-  {professional.map((pro) =>(
+  {professional.sort((a,b) => b.data.year - a.data.year ).map((pro) =>(
    
  <Card>
 <CardHeader>
     <CardTitle>{pro.data.title}</CardTitle>
-    <CardDescription>{pro.data.company}</CardDescription>
+    <CardDescription>{pro.data.company} - {pro.data.duration}</CardDescription>
     <CardAction>{pro.data.year}</CardAction>
   </CardHeader>
   <CardContent>
-    <p>My tasks </p>
+    
+    {pro.data.tasks.map(task => 
+      (
+        <ul class="list-disc">
+        <li>{task}</li>
+        </ul>
+      )
+    )}  
   </CardContent>
   <CardFooter>
     <p>Card Footer</p>

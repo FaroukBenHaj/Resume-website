@@ -6,5 +6,6 @@ export const zProfessional = ()=>
         duration: z.string() ,
         title: z.string(),
         year: z.number(),
+        tasks: z.array(z.string()),
     });
 

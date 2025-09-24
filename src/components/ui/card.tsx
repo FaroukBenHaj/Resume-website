@@ -32,7 +32,7 @@ function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-title"
-      className={cn("leading-none font-bold lg:text-2xl text-xl ", className)}
+      className={cn("leading-none font-bold lg:text-2xl text-xl text-blue-200", className)}
       {...props}
     />
   )
@@ -63,9 +63,9 @@ function CardAction({ className, ...props }: React.ComponentProps<"div">) {
 
 function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
-    <div
+    <div 
       data-slot="card-content"
-      className={cn("px-6", className)}
+      className={cn("px-9 flex flex-col lg:gap-2 gap-0.5", className)}
       {...props}
     />
   )
