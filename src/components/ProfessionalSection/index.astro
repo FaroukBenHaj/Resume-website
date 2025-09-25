@@ -10,12 +10,12 @@ import {
 } from "@/components/ui/card";
 import { getCollection } from "astro:content";
 const professional = await getCollection("professional");
-
+import { H2 } from "@/components/ui/typography";
 import{ BoxSkills} from '@/components/ui/box';
 ---
 <section class="flex flex-col gap-5 md:m-10 m-5 lg:px-30 ">
   <div id="header" class="text-center flex flex-col gap-5">
-    <h1 class="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-300 to-orange-400 bg-clip-text text-transparent text-balance ">Work experience </h1>
+    <H2 header="Work experience"/>
     <p class="text-xl ">A journey through multiple internships, contributing to development and user experience design, 
       and building hands-on expertise in full-stack web applications and intuitive interfaces.</p>
   </div>
