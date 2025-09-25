@@ -10,6 +10,10 @@ export const zGeneral = ()=>
         actionbutton: z.object({
             contact: z.string(),
             cv: z.string(),
+        }),
+        media: z.object({
+            img: z.string(),
+            alt: z.string(),
         })
     });
 

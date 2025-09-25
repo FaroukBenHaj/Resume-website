@@ -1,0 +1,26 @@
+---
+import { Button } from "./ui/button";
+import { getCollection } from 'astro:content';
+const generals = await getCollection("generals");
+const generalInfo = generals[0];
+---
+<section id="aboutMe" class="flex md:flex-row flex-col justify-between">
+    <div class="flex flex-col m">
+        <h1 class="text-4xl font-bold "
+        >About Me </h1>
+        <p>
+           👋 Hi, I’m Mohamed Farouk — a Software Engineering student at *Esprit*, based in Tunisia. </p> 
+            <p>I specialize in **software architecture and web development**, with a strong interest in building scalable applications and exploring how AI can transform user experiences.
+            Beyond coding, I value teamwork, continuous learning, and creating solutions that make a real impact.  </p>
+            <p>I’m currently seeking opportunities to grow as a developer and contribute to exciting projects.    </p>
+        </p>
+        <Button 
+        variant="outline"
+        >
+            🚀 Let’s connect and build something great together!
+        </Button>
+    </div>
+    <div >
+        <img class="lg:max-w-50 " src={generalInfo.data.media.img} alt={generalInfo.data.media.alt}/>
+    </div>
+</section>

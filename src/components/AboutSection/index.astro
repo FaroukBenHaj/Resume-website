@@ -1,0 +1,31 @@
+---
+import { Button } from "@/components/ui/button";
+import { getCollection } from 'astro:content';
+import {H2} from '@/components/ui/typography';
+const generals = await getCollection("generals");
+const generalInfo = generals[0];
+---
+<section id="aboutMe" class="mx-5 grid sm:grid-cols-2 grid-cols-1 gap-10 lg:px-30">
+    <div class="flex flex-col justify-center gap-5" >
+       <H2 header="About Me "/>
+       <div class="flex flex-col gap-2">
+<p>👋 Hi, I'm Mohamed Farouk, an aspiring Software Engineer and final-year student at ESPRIT in Tunisia. </p> 
+        <p>I love turning ideas into functional web applications, focusing on both software architecture and user experience design .</p>
+        <p>Through internships and personal projects,
+             I've gained hands-on experience in front-end and back-end development, and I enjoy exploring how AI can support my work while keeping creative control</p>
+       </div>
+        
+            
+       <a href="https://www.linkedin.com/in/mohamed-farouk-ben-haj-amor/">
+        <Button 
+        variant="outline"
+        >
+            🚀 Let's connect ! 
+        </Button>
+    </a> 
+    </div>
+    <div class="flex items-center md:justify-end">
+        <img class="sm:max-w-60  rounded-2xl" src={generalInfo.data.media.img} alt={generalInfo.data.media.alt}/>
+    </div>
+
+</section>
