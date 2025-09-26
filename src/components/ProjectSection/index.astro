@@ -1,0 +1,59 @@
+---
+import {H2} from '@/components/ui/typography';
+import { Button } from '@/components/ui/button';
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
+import { LuGithub } from "react-icons/lu";
+import {Card, CardAction, CardContent, CardDescription, CardFooter, CardTitle} from'@/components/ui/card';
+import { BoxSkills } from '@/components/ui/box';
+import { CardHeader } from '@/components/ui/card';
+---
+<section class="flex flex-col items-center gap-10 my-20">
+<div class="text-center flex flex-col gap-5">
+    <H2 header="Featured Projects"/>
+    <p>A selection of my most impactful projects showcasing  development, design and problem-solving skills.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10 ">
+    {projects.map((project) => (
+        <Card>
+        <CardHeader>
+        <CardTitle>{project.data.name}</CardTitle>
+       <CardAction>
+        {project.data.year}
+        </CardAction> 
+        <CardDescription>
+            {project.data.webType} - 
+            {project.data.type} project 
+        </CardDescription>
+    </CardHeader>
+
+        <CardContent> 
+        
+        {project.data.description}
+        {project.data.relatedSkills.map((pro)=> (  
+            <BoxSkills message={pro.id}/>
+        ))}
+
+        </CardContent>     
+        <CardFooter>
+             <a href={project.data.githublink}>
+           <Button
+           variant="outline"
+           >
+            <LuGithub/> View code 
+        </Button> </a>
+        </CardFooter>
+       
+        </Card>
+        
+    ))}
+</div>
+    <a
+    href="https://github.com/FaroukBenHaj"
+    ><Button
+    variant="default"
+    size="lg"
+    ><LuGithub />
+    View all projects on Github</Button></a>
+    
+</section>
