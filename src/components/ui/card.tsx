@@ -65,7 +65,7 @@ function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div 
       data-slot="card-content"
-      className={cn("px-9 flex flex-col lg:gap-2 gap-0.5", className)}
+      className={cn("px-9 flex flex-wrap lg:gap-2 gap-0.5", className)}
       {...props}
     />
   )
@@ -75,7 +75,7 @@ function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-footer"
-      className={cn("flex  flex-col sm:flex-row gap-2 sm:items-center text-center px-6 [.border-t]:pt-6", className)}
+      className={cn("flex  flex-wrap gap-2 sm:items-center text-center px-6 [.border-t]:pt-6", className)}
       {...props}
     />
   )
