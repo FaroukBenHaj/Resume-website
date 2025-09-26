@@ -4,6 +4,7 @@ import { zGeneral } from "./schemas/general";
 import { zProfessional } from "./schemas/professional";
 import { zSkills } from "./schemas/skills";
 import { zProjects } from "./schemas/projects";
+import { zCertificates } from "./schemas/certificates";
 
 export const collections= {
     generals: defineCollection({
@@ -21,6 +22,10 @@ export const collections= {
     projects: defineCollection({
         loader: glob({pattern:"**/*.mdx" , base:"./src/content/projects"}),
         schema:zProjects, 
+    }),
+     certificates: defineCollection({
+        loader: glob({pattern:"**/*.mdx" , base:"./src/content/certificates"}),
+        schema:zCertificates, 
     })
 
 }

@@ -1,0 +1,28 @@
+---
+import{H2} from '@/components/ui/typography';
+import {Card, CardHeader, CardTitle , CardAction, CardDescription} from '@/components/ui/card';
+import { getCollection } from 'astro:content';
+import { BoxSkills } from '../ui/box';
+const certificates = await getCollection("certificates");
+---
+<section class="flex flex-col gap-10 mb-50 mt-10">
+    <div class="flex flex-col text-center gap-5">
+        <H2 header="Certifications"/>
+        <p>Certificates from courses and programs I have successfully completed.</p>
+    </div>
+    <div class="grid grid-cols-3 lg:px-30 gap-5">
+        {certificates.map((certif) => 
+    (
+        <Card>
+        <CardHeader>
+            <CardTitle>{certif.data.name}</CardTitle>
+            <CardAction>
+                {certif.data.level}
+                </CardAction>
+            <CardDescription> {certif.data.origin} {certif.data.project} - {certif.data.type}</CardDescription>
+        </CardHeader>
+    </Card>
+    ))}
+    
+    </div>
+</section>
