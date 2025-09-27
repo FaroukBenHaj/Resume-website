@@ -8,7 +8,7 @@ import {Card, CardAction, CardContent, CardDescription, CardFooter, CardTitle} f
 import { BoxSkills } from '@/components/ui/box';
 import { CardHeader } from '@/components/ui/card';
 ---
-<section class="flex flex-col items-center gap-10 lg:px-30  my-20">
+<section class="flex flex-col items-center gap-10 lg:px-30 mx-2 sm:mx-5 my-20">
 <div class="text-center flex flex-col gap-5">
     <H2 header="Featured Projects"/>
     <p>A selection of my most impactful projects showcasing  development, design and problem-solving skills.</p>
@@ -17,11 +17,12 @@ import { CardHeader } from '@/components/ui/card';
     {projects.map((project) => (
         <Card>
         <CardHeader>
+      
         <CardTitle>{project.data.name}</CardTitle>
        <CardAction>
         {project.data.year}
         </CardAction> 
-        <CardDescription>
+          <CardDescription>
             {project.data.webType} - 
             {project.data.type} project 
         </CardDescription>
