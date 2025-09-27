@@ -1,46 +1,78 @@
-# Astro Starter Kit: Basics
+# 🌐 Mohamed Farouk – Portfolio
 
-```sh
-npm create astro@latest -- --template basics
+Welcome to my personal portfolio repository!
+This project showcases my skills, projects, and experiences as a **Final-Year Software Engineering Student at ESPRIT**.
+
+---
+
+## 🚀 Features
+
+* ✨ Modern and responsive design
+* 🧑‍💻 About Me section
+* 💼 Featured projects with live demos & source code
+* 🛠️ Tech stack overview
+* 📩 Contact form
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework:** [Astro](https://astro.build/)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+* **Components:** [shadcn/ui](https://ui.shadcn.com/)
+* **Icons:** [Lucide React](https://lucide.dev/)
+* **Deployment:** [Netlify](https://www.netlify.com/)
+
+---
+
+## 📸 Screenshots
+
+<img width="1912" height="993" alt="Screenshot from 2025-09-27 01-14-50" src="https://github.com/user-attachments/assets/13d02bb5-729d-4a66-9083-bce1505a3348" />
+
+---
+
+## 🔗 Live Demo
+
+👉 [View Portfolio]([https://your-portfolio-link.netlify.app](https://farouk-dev.netlify.app/))
+
+---
+
+## 📂 Installation & Setup
+
+If you want to run the project locally:
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/portfolio.git
+
+# Go into the project
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+---
 
-## 🚀 Project Structure
+## 📬 Contact
 
-Inside of your Astro project, you'll see the following folders and files:
+If you'd like to get in touch:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+* LinkedIn: [My LinkedIn]([https://linkedin.com/in/yourusername](https://www.linkedin.com/in/mohamed-farouk-ben-haj-amor/))
+* Email: **[mohamedfarouk.benhajamor@gmail.com](mailto:mohamedfarouk.benhajamor@gmail.com)**
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## 📄 License
 
-All commands are run from the root of the project, from a terminal:
+This project is licensed under the MIT License.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+⚡ Built with passion by **Mohamed Farouk**
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
