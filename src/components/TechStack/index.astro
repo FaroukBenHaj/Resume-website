@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 const skills = await getCollection("skills");
 import{H2} from '@/components/ui/typography';
+import LogoLoop from '@/components/ui/LogoLoop.tsx';
 ---
 <section class="text-center flex flex-col gap-15 py-10">
     <div class="flex flex-col gap-5">
@@ -9,11 +10,23 @@ import{H2} from '@/components/ui/typography';
     <p class="text-xl ">Technologies and tools I use across development, design, and operating systems</p>
     </div>
    
-    <div class="flex flex-wrap  gap-5 justify-center  ">
-        {skills.map((skill)=>(
-            <img class="md:max-w-30 md:max-h-30 max-w-20 max-h-20 " src={skill.data.media.logo} alt={skill.data.media.alt} />
-        )
-        )}
+    <div style={{ height: '200px', position: 'relative', overflow: 'hidden'}}>
+
+      <LogoLoop
+
+       logos={skills.map(skill => ({
+                src: skill.data.media.logo,
+                alt: skill.data.media.alt,
+            }))}
+            speed={120}
+            direction="left"
+            logoHeight={48}
+            gap={40}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            ariaLabel="Technology partners"
+                />
 
     </div>
 </section>
